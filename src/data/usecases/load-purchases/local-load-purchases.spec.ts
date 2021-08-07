@@ -8,7 +8,7 @@ type SutTypes = {
 
 const makeSut = (timestamp = new Date()): SutTypes => {
   const cacheStore = new CacheStoreSpy()
-  const sut = new LocalLoadPurchases(cacheStore, timestamp)
+  const sut /*System Under Test*/ = new LocalLoadPurchases(cacheStore, timestamp)
 
   return {
     sut,
